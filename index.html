@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>June OS</title>
+
+<style>
+    body {
+        background-color: #000;
+        color: #00ff66;
+        font-family: Consolas, "Courier New", monospace;
+        padding: 20px;
+    }
+
+    .terminal {
+        max-width: 900px;
+        margin: auto;
+        border: 2px solid #00ff66;
+        padding: 20px;
+        box-shadow: 0 0 20px #00ff66;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .bar {
+        color: #00ff66;
+    }
+
+    a, button {
+        color: #00ff66;
+        background: black;
+        border: 1px solid #00ff66;
+        padding: 6px 12px;
+        font-family: inherit;
+        cursor: pointer;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    a:hover, button:hover {
+        background: #00ff66;
+        color: black;
+    }
+
+    .cmd {
+        margin-top: 15px;
+    }
+
+    .prompt::before {
+        content: "JuneOS> ";
+        color: #00ff66;
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-size: 0.8em;
+        opacity: 0.8;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="terminal">
+    <div class="title">
+        ---------------------------------<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;June OS<br>
+        ---------------------------------
+    </div>
+
+    <p>Démarrage de June OS ███████████████████████</p>
+
+    <div class="cmd">
+        <div class="prompt">
+            OS batch expérimental inspiré d’une interface console.
+        </div>
+    </div>
+
+    <div class="cmd">
+        <div class="prompt">
+            Version actuelle : <strong>v1.5</strong>
+        </div>
+    </div>
+
+    <div class="cmd">
+        <div class="prompt">
+            Télécharger June OS :
+        </div>
+        <br>
+        <a href="JuneOS.bat" download>Télécharger JuneOS.bat</a>
+    </div>
+
+    <div class="cmd">
+        <div class="prompt">
+            Être notifié des mises à jour :
+        </div>
+        <br>
+        <button onclick="subscribe()">Me prévenir</button>
+    </div>
+
+    <div class="cmd">
+        <div class="prompt">
+            Commandes disponibles :
+        </div>
+        <pre>
+RUN        Lance une application
+SHOW       Affiche un texte
+VAR        Crée une variable
+MODE       Change le mode
+CALCUL    Calcul arithmétique
+QUIT       Quitte June OS
+HELP       Liste les commandes
+        </pre>
+    </div>
+
+    <div class="footer">
+        [ June OS © 2026 ]<br>
+        Interface batch · GitHub Pages
+    </div>
+</div>
+
+<!-- OneSignal (optionnel) -->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script>
+    function subscribe() {
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "TON_APP_ID_ICI"
+            });
+            OneSignal.showSlidedownPrompt();
+        });
+    }
+</script>
+
+</body>
+</html>
 
